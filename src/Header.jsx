@@ -42,7 +42,7 @@ class Header extends Component {
   }
 
   onInputChange = (event) => {
-    const str = event.target.value;
+    const str = event.target.value.english();
     this.setState({
       str,
     });
@@ -158,7 +158,7 @@ class Header extends Component {
         className={`${prefixCls}-input  ${invalidClass}`}
         ref="input"
         onKeyDown={this.onKeyDown}
-        value={str}
+        value={this.props.formatter(str)}
         placeholder={placeholder}
         onChange={this.onInputChange}
       />
