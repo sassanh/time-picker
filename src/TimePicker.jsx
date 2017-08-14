@@ -259,7 +259,7 @@ export default class Picker extends Component {
             name={name}
             readOnly
             onKeyDown={this.onKeyDown}
-            disabled={disabled} value={value && value.format(this.getFormat()) || ''}
+            disabled={disabled} value={value && this.props.formatter(value.format(this.getFormat())) || ''}
             autoComplete={autoComplete}
           />
           <span className={`${prefixCls}-icon`}/>
