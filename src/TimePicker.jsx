@@ -181,6 +181,7 @@ export default class Picker extends Component {
         hideDisabledOptions={hideDisabledOptions}
         use12Hours={use12Hours}
         addon={addon}
+        formatter={this.props.formatter}
       />
     );
   }
