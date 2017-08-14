@@ -46,6 +46,7 @@ export default class Picker extends Component {
     name: PropTypes.string,
     autoComplete: PropTypes.string,
     use12Hours: PropTypes.bool,
+    formatter: PropTypes.func,
   };
 
   static defaultProps = {
@@ -71,6 +72,7 @@ export default class Picker extends Component {
     onClose: noop,
     addon: noop,
     use12Hours: false,
+    formatter: value => value,
   };
 
   constructor(props) {
