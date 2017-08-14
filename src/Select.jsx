@@ -71,7 +71,7 @@ class Select extends Component {
         onClick={onclick}
         disabled={item.disabled}
       >
-        {item.value}
+        {this.props.formatter(item.value)}
       </li>);
     });
   }
