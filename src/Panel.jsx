@@ -122,6 +122,7 @@ class Panel extends Component {
           onChange={this.onChange}
           onClear={onClear}
           allowEmpty={allowEmpty}
+          formatter={this.props.formatter}
         />
         <Combobox
           prefixCls={prefixCls}
@@ -140,6 +141,7 @@ class Panel extends Component {
           disabledSeconds={disabledSeconds}
           onCurrentSelectPanelChange={this.onCurrentSelectPanelChange}
           use12Hours={use12Hours}
+          formatter={this.props.formatter}
         />
         {addon(this)}
       </div>
