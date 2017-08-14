@@ -100,6 +100,7 @@ class Combobox extends Component {
         options={hourOptionsAdj.map(option => formatOption(option, disabledOptions))}
         selectedIndex={hourOptionsAdj.indexOf(hourAdj)}
         type="hour"
+        formatter={this.props.formatter}
         onSelect={this.onItemChange}
         onMouseEnter={this.onEnterSelectPanel.bind(this, 'hour')}
       />
@@ -120,6 +121,7 @@ class Combobox extends Component {
         options={minuteOptions.map(option => formatOption(option, disabledOptions))}
         selectedIndex={minuteOptions.indexOf(minute)}
         type="minute"
+        formatter={this.props.formatter}
         onSelect={this.onItemChange}
         onMouseEnter={this.onEnterSelectPanel.bind(this, 'minute')}
       />
@@ -140,6 +142,7 @@ class Combobox extends Component {
         options={secondOptions.map(option => formatOption(option, disabledOptions))}
         selectedIndex={secondOptions.indexOf(second)}
         type="second"
+        formatter={this.props.formatter}
         onSelect={this.onItemChange}
         onMouseEnter={this.onEnterSelectPanel.bind(this, 'second')}
       />
@@ -164,6 +167,7 @@ class Combobox extends Component {
         options={AMPMOptions}
         selectedIndex={selected}
         type="ampm"
+        formatter={this.props.formatter}
         onSelect={this.onItemChange}
         onMouseEnter={this.onEnterSelectPanel.bind(this, 'ampm')}
       />
